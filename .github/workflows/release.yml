@@ -44,6 +44,8 @@ jobs:
         cd ..
     - name: Build Skia
       run: |
+        echo "++++++++++++++PWD: ${PWD}++++++++++++++"
+        ls -lh .
         cd skia
         patch -p1 < ../patch/git-sync-deps.patch
         python tools/git-sync-deps
